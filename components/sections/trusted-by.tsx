@@ -1,0 +1,47 @@
+"use client";
+
+import { motion } from "motion/react";
+import { Building2, Factory, GraduationCap, Landmark, Warehouse, Zap, Truck, Hospital } from "lucide-react";
+
+import { Marquee } from "@/components/motion/marquee";
+
+// Placeholder sector badges — swap for real client/institution logos before launch.
+const sectors = [
+  { icon: Factory, label: "Industria Manufacturera" },
+  { icon: Warehouse, label: "Logística y Montacargas" },
+  { icon: Zap, label: "Energía Solar" },
+  { icon: GraduationCap, label: "Universidades Técnicas" },
+  { icon: Landmark, label: "Sector Público" },
+  { icon: Building2, label: "Sector Minero" },
+  { icon: Truck, label: "Transporte y Flotas" },
+  { icon: Hospital, label: "Salud y Hospitales" },
+];
+
+export function TrustedBy() {
+  return (
+    <section id="trusted-by" className="relative scroll-mt-28 border-y border-white/5 py-14">
+      <div className="container">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mb-8 text-center text-xs font-medium uppercase tracking-[0.28em] text-white/40"
+        >
+          Empresas e Instituciones que Confían en Nosotros
+        </motion.p>
+      </div>
+
+      <Marquee>
+        {sectors.map(({ icon: Icon, label }) => (
+          <div
+            key={label}
+            className="flex items-center gap-3 rounded-xl border border-white/8 bg-white/[0.02] px-6 py-3.5 text-white/50 transition-colors hover:border-primary/30 hover:text-white/90"
+          >
+            <Icon className="h-5 w-5" strokeWidth={1.5} />
+            <span className="whitespace-nowrap text-sm font-medium">{label}</span>
+          </div>
+        ))}
+      </Marquee>
+    </section>
+  );
+}

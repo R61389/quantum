@@ -1,0 +1,8 @@
+{
+  "name": "quantum",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "motion": "^13.1.0"
+  }
+}

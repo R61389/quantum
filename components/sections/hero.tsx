@@ -9,8 +9,11 @@ import { TextReveal } from "@/components/motion/text-reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { MouseGlow } from "@/components/motion/mouse-glow";
 import { BatteryCoreVisual } from "@/components/motion/battery-core-visual";
+import { useAssistant } from "@/components/assistant/context";
 
 export function Hero() {
+  const { openAssistant } = useAssistant();
+
   return (
     <section id="top" className="relative scroll-mt-28 overflow-hidden pb-20 pt-40 lg:pb-32 lg:pt-48">
       <div className="absolute inset-0 bg-aurora-mesh" aria-hidden="true" />
@@ -68,13 +71,22 @@ export function Hero() {
             className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center"
           >
             <MagneticButton>
-              <Button size="lg" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="w-full sm:w-auto"
+                onClick={() => openAssistant("identificar")}
+              >
                 Solicitar Cotización
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </MagneticButton>
             <MagneticButton>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto">
+              <Button
+                size="lg"
+                variant="outline"
+                className="w-full sm:w-auto"
+                onClick={() => openAssistant("diagnostico")}
+              >
                 <MessageCircle className="h-4 w-4" />
                 Hablar con un Ingeniero
               </Button>

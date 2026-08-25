@@ -6,6 +6,7 @@ import { Menu, X, Zap } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { MagneticButton } from "@/components/motion/magnetic-button";
+import { useAssistant } from "@/components/assistant/context";
 
 const links = [
   { href: "#soluciones", label: "Soluciones" },
@@ -19,6 +20,7 @@ const links = [
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { openAssistant } = useAssistant();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -62,7 +64,9 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <MagneticButton>
-              <Button size="sm">Solicitar Cotización</Button>
+              <Button size="sm" onClick={() => openAssistant("identificar")}>
+                Solicitar Cotización
+              </Button>
             </MagneticButton>
           </div>
 
@@ -96,7 +100,14 @@ export function Navbar() {
                   {link.label}
                 </a>
               ))}
-              <Button size="sm" className="mt-2 w-full">
+              <Button
+                size="sm"
+                className="mt-2 w-full"
+                onClick={() => {
+                  setOpen(false);
+                  openAssistant("identificar");
+                }}
+              >
                 Solicitar Cotización
               </Button>
             </div>

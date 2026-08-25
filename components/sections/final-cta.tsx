@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { MouseGlow } from "@/components/motion/mouse-glow";
+import { useAssistant } from "@/components/assistant/context";
 
 export function FinalCTA() {
+  const { openAssistant } = useAssistant();
+
   return (
     <section className="relative overflow-hidden py-28 lg:py-36">
       <div className="absolute inset-0 bg-aurora-mesh" aria-hidden="true" />
@@ -45,13 +48,13 @@ export function FinalCTA() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <MagneticButton>
-            <Button size="lg">
+            <Button size="lg" onClick={() => openAssistant("identificar")}>
               Solicitar Cotización
               <ArrowRight className="h-4 w-4" />
             </Button>
           </MagneticButton>
           <MagneticButton>
-            <Button size="lg" variant="outline">
+            <Button size="lg" variant="outline" onClick={() => openAssistant("diagnostico")}>
               <MessageCircle className="h-4 w-4" />
               Contactar Ingeniero
             </Button>

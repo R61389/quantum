@@ -1,0 +1,178 @@
+import type { BatteryProduct } from "./types";
+
+// Representative product catalog for the assistant demo — replace with the
+// real Quantum Batteries product line (and keep it in sync with pricing/
+// inventory) before this powers real quotes.
+export const BATTERY_DATABASE: BatteryProduct[] = [
+  {
+    id: "qb-12-100",
+    modelo: "QB-12-100",
+    voltaje: 12,
+    ah: 100,
+    dimensiones: "330 x 172 x 220 mm",
+    peso: 12,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["UPS", "Solar"],
+    ciclosVida: 4000,
+    compatibilidades: ["Grupo 27", "Grupo 31 plomo-ácido"],
+    tier: "estandar",
+  },
+  {
+    id: "qb-12-150",
+    modelo: "QB-12-150",
+    voltaje: 12,
+    ah: 150,
+    dimensiones: "483 x 170 x 241 mm",
+    peso: 16,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["UPS", "Solar", "Industrial"],
+    ciclosVida: 4500,
+    compatibilidades: ["Grupo 31 plomo-ácido", "Banco 2x100Ah plomo-ácido"],
+    tier: "autonomia",
+  },
+  {
+    id: "qb-12-200p",
+    modelo: "QB-12-200P",
+    voltaje: 12,
+    ah: 200,
+    dimensiones: "522 x 238 x 223 mm",
+    peso: 22,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["UPS", "Solar", "Industrial"],
+    ciclosVida: 6000,
+    compatibilidades: ["Banco 2x100Ah plomo-ácido", "Banco 4x6V plomo-ácido"],
+    tier: "premium",
+  },
+  {
+    id: "qb-24-100",
+    modelo: "QB-24-100",
+    voltaje: 24,
+    ah: 100,
+    dimensiones: "480 x 170 x 270 mm",
+    peso: 24,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Solar", "Industrial"],
+    ciclosVida: 4000,
+    compatibilidades: ["Banco 2x12V 100Ah plomo-ácido"],
+    tier: "estandar",
+  },
+  {
+    id: "qb-24-150",
+    modelo: "QB-24-150",
+    voltaje: 24,
+    ah: 150,
+    dimensiones: "522 x 240 x 270 mm",
+    peso: 32,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Solar", "Industrial", "Montacargas"],
+    ciclosVida: 4500,
+    compatibilidades: ["Banco 2x12V 150Ah plomo-ácido"],
+    tier: "autonomia",
+  },
+  {
+    id: "qb-24-200p",
+    modelo: "QB-24-200P",
+    voltaje: 24,
+    ah: 200,
+    dimensiones: "560 x 245 x 280 mm",
+    peso: 42,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Solar", "Industrial", "Montacargas"],
+    ciclosVida: 6000,
+    compatibilidades: ["Banco 4x12V 100Ah plomo-ácido"],
+    tier: "premium",
+  },
+  {
+    id: "qb-48-100",
+    modelo: "QB-48-100",
+    voltaje: 48,
+    ah: 100,
+    dimensiones: "600 x 260 x 400 mm",
+    peso: 46,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Montacargas", "Industrial"],
+    ciclosVida: 3500,
+    compatibilidades: ["Banco 24 celdas 2V plomo-ácido"],
+    tier: "estandar",
+  },
+  {
+    id: "qb-48-150",
+    modelo: "QB-48-150",
+    voltaje: 48,
+    ah: 150,
+    dimensiones: "650 x 280 x 420 mm",
+    peso: 64,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Montacargas", "Industrial"],
+    ciclosVida: 4000,
+    compatibilidades: ["Banco 24 celdas 2V plomo-ácido de mayor capacidad"],
+    tier: "autonomia",
+  },
+  {
+    id: "qb-48-200p",
+    modelo: "QB-48-200P",
+    voltaje: 48,
+    ah: 200,
+    dimensiones: "700 x 300 x 440 mm",
+    peso: 84,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Montacargas", "Industrial"],
+    ciclosVida: 5500,
+    compatibilidades: ["Banco 24 celdas 2V plomo-ácido de alta capacidad"],
+    tier: "premium",
+  },
+  {
+    id: "qb-em-36-50",
+    modelo: "QB-EM-36-50",
+    voltaje: 36,
+    ah: 50,
+    dimensiones: "360 x 130 x 180 mm",
+    peso: 18,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Electromovilidad"],
+    ciclosVida: 3000,
+    compatibilidades: ["Packs 36V originales de bajo rendimiento"],
+    tier: "estandar",
+  },
+  {
+    id: "qb-em-60-40",
+    modelo: "QB-EM-60-40",
+    voltaje: 60,
+    ah: 40,
+    dimensiones: "380 x 140 x 190 mm",
+    peso: 22,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Electromovilidad"],
+    ciclosVida: 3000,
+    compatibilidades: ["Packs 60V originales estándar"],
+    tier: "autonomia",
+  },
+  {
+    id: "qb-em-72-50p",
+    modelo: "QB-EM-72-50P",
+    voltaje: 72,
+    ah: 50,
+    dimensiones: "420 x 150 x 200 mm",
+    peso: 28,
+    tipoQuimico: "LiFePO4",
+    aplicacion: ["Electromovilidad"],
+    ciclosVida: 4000,
+    compatibilidades: ["Packs 72V originales de alto rendimiento"],
+    tier: "premium",
+  },
+];
+
+export function wattHours(voltaje: number, ah: number): number {
+  return voltaje * ah;
+}
+
+export function findProductsByVoltage(voltaje: number): BatteryProduct[] {
+  return BATTERY_DATABASE.filter((p) => p.voltaje === voltaje);
+}
+
+export function findClosestVoltageClass(voltaje: number): number {
+  const voltages = Array.from(new Set(BATTERY_DATABASE.map((p) => p.voltaje)));
+  return voltages.reduce((closest, v) =>
+    Math.abs(v - voltaje) < Math.abs(closest - voltaje) ? v : closest
+  );
+}

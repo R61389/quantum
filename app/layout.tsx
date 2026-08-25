@@ -2,6 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
+import { AssistantProvider } from "@/components/assistant/context";
+import { AssistantPanel } from "@/components/assistant/assistant-panel";
+import { WhatsAppFloatButton } from "@/components/assistant/whatsapp-float-button";
+
 import "./globals.css";
 
 const siteUrl = "https://quantumbatteries.bo";
@@ -64,7 +68,11 @@ export default function RootLayout({
   return (
     <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans text-foreground">
-        {children}
+        <AssistantProvider>
+          {children}
+          <AssistantPanel />
+          <WhatsAppFloatButton />
+        </AssistantProvider>
       </body>
     </html>
   );

@@ -39,8 +39,8 @@ export function SummaryView() {
   return (
     <div>
       {!hasContext && (
-        <div className="mb-5 flex flex-col items-center gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-6 text-center">
-          <Inbox className="h-6 w-6 text-white/30" />
+        <div className="mb-5 flex flex-col items-center gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-6 text-center">
+          <Inbox className="h-6 w-6 text-foreground/30" />
           <p className="text-sm text-muted-foreground">
             Aún no recopilamos información. Usa el diagnóstico, la
             identificación de batería o una calculadora, o escribe
@@ -50,20 +50,20 @@ export function SummaryView() {
       )}
 
       {collected.diagnostico && (
-        <div className="mb-3 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-          <Stethoscope className="mt-0.5 h-4 w-4 shrink-0 text-quantum-electric-blue" />
+        <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+          <Stethoscope className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
           <div>
-            <p className="text-xs font-medium text-white">{collected.diagnostico.symptomLabel}</p>
+            <p className="text-xs font-medium text-foreground">{collected.diagnostico.symptomLabel}</p>
             <p className="mt-0.5 text-xs text-muted-foreground">{collected.diagnostico.result.title}</p>
           </div>
         </div>
       )}
 
       {collected.bateriaActual && (
-        <div className="mb-3 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-          <ScanSearch className="mt-0.5 h-4 w-4 shrink-0 text-quantum-electric-blue" />
+        <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+          <ScanSearch className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
           <div>
-            <p className="text-xs font-medium text-white">
+            <p className="text-xs font-medium text-foreground">
               {collected.bateriaActual.modelo || "Batería identificada"}
             </p>
             <p className="mt-0.5 text-xs text-muted-foreground">
@@ -75,10 +75,10 @@ export function SummaryView() {
       )}
 
       {collected.calculo && (
-        <div className="mb-3 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-          <Calculator className="mt-0.5 h-4 w-4 shrink-0 text-quantum-electric-blue" />
+        <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+          <Calculator className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
           <div>
-            <p className="text-xs font-medium text-white">Cálculo: {collected.calculo.tipo}</p>
+            <p className="text-xs font-medium text-foreground">Cálculo: {collected.calculo.tipo}</p>
             <p className="mt-0.5 text-xs text-muted-foreground">{collected.calculo.resumen}</p>
           </div>
         </div>
@@ -100,13 +100,13 @@ export function SummaryView() {
             resetCollected();
             setMode("menu");
           }}
-          className="mt-2 w-full rounded-full border border-white/10 px-5 py-3 text-sm text-white/60 hover:text-white"
+          className="mt-2 w-full rounded-full border border-foreground/10 px-5 py-3 text-sm text-foreground/60 hover:text-foreground"
         >
           Empezar de nuevo
         </button>
       )}
 
-      <p className="mt-4 text-[0.7rem] leading-relaxed text-white/35">
+      <p className="mt-4 text-[0.7rem] leading-relaxed text-foreground/35">
         Este resumen se abre en WhatsApp para que lo envíes tú mismo a
         nuestro equipo — ningún dato se comparte automáticamente sin tu
         confirmación.

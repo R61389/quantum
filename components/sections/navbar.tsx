@@ -42,11 +42,11 @@ export function Navbar() {
           }`}
         >
           <a href="#top" className="flex items-center gap-2.5">
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#00D4FF,#00FF88)]">
-              <Zap className="h-5 w-5 text-black" strokeWidth={2.5} />
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#00205B,#4968A2)]">
+              <Zap className="h-5 w-5 text-white" strokeWidth={2.5} />
             </span>
-            <span className="text-sm font-semibold tracking-tight text-white">
-              QUANTUM <span className="text-white/50">BATTERIES</span>
+            <span className="text-sm font-semibold tracking-tight text-foreground">
+              QUANTUM <span className="text-foreground/50">BATTERIES</span>
             </span>
           </a>
 
@@ -55,7 +55,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-white/65 transition-colors hover:text-white"
+                className="text-sm text-foreground/65 transition-colors hover:text-foreground"
               >
                 {link.label}
               </a>
@@ -73,7 +73,7 @@ export function Navbar() {
           <button
             aria-label={open ? "Cerrar menú" : "Abrir menú"}
             onClick={() => setOpen((v) => !v)}
-            className="rounded-lg border border-white/10 p-2 text-white lg:hidden"
+            className="rounded-lg border border-foreground/10 p-2 text-foreground lg:hidden"
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
@@ -95,7 +95,7 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm text-white/75 hover:bg-white/5 hover:text-white"
+                  className="rounded-lg px-3 py-2.5 text-sm text-foreground/75 hover:bg-foreground/5 hover:text-foreground"
                 >
                   {link.label}
                 </a>

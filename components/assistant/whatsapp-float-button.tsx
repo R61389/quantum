@@ -17,9 +17,9 @@ export function WhatsAppFloatButton() {
             initial={{ opacity: 0, x: 16 }}
             animate={{ opacity: 1, x: 0, transition: { delay: 1.2, duration: 0.5 } }}
             exit={{ opacity: 0, x: 16, transition: { duration: 0.25, delay: 0 } }}
-            className="glass-strong hidden max-w-[220px] items-center gap-2 rounded-2xl px-4 py-3 text-xs text-white/80 shadow-xl sm:flex"
+            className="glass-strong hidden max-w-[220px] items-center gap-2 rounded-2xl px-4 py-3 text-xs text-foreground/80 shadow-xl sm:flex"
           >
-            <Sparkles className="h-4 w-4 shrink-0 text-quantum-lithium-green" />
+            <Sparkles className="h-4 w-4 shrink-0 text-quantum-navy-light" />
             Habla con nuestro asistente de baterías de litio
           </motion.div>
         )}

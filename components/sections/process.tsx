@@ -26,20 +26,20 @@ export function Process() {
           <TextReveal
             as="h2"
             text="De diagnóstico a soporte continuo"
-            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
         </div>
 
         <div className="relative mt-20">
           {/* connecting energy line */}
-          <div className="absolute left-6 top-0 hidden h-full w-px bg-white/10 lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-full" />
+          <div className="absolute left-6 top-0 hidden h-full w-px bg-foreground/10 lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-full" />
           <motion.div
             initial={{ scaleY: 0, scaleX: 0 }}
             whileInView={{ scaleY: 1, scaleX: 1 }}
             viewport={{ once: true, margin: "-20%" }}
             transition={{ duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: "top left" }}
-            className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-quantum-electric-blue via-quantum-lithium-green to-quantum-energy-cyan lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-full lg:bg-gradient-to-r"
+            className="absolute left-6 top-0 hidden h-full w-px bg-gradient-to-b from-quantum-navy via-quantum-navy-light to-quantum-navy-mid lg:left-0 lg:right-0 lg:top-6 lg:h-px lg:w-full lg:bg-gradient-to-r"
           />
 
           <div className="grid gap-10 lg:grid-cols-6 lg:gap-6">
@@ -52,14 +52,14 @@ export function Process() {
                 transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex gap-5 lg:flex-col lg:gap-4"
               >
-                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-quantum-electric-blue/40 bg-quantum-carbon-black text-quantum-electric-blue shadow-[0_0_20px_-4px_rgba(0,212,255,0.6)]">
+                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-quantum-navy/40 bg-background text-quantum-navy shadow-[0_0_20px_-4px_rgba(0,32,91,0.35)]">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <span className="font-mono text-xs text-quantum-lithium-green">
+                  <span className="font-mono text-xs text-quantum-navy-light">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <h3 className="mt-1 text-base font-semibold text-white">{title}</h3>
+                  <h3 className="mt-1 text-base font-semibold text-foreground">{title}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
                     {description}
                   </p>

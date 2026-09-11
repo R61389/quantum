@@ -8,6 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { MouseGlow } from "@/components/motion/mouse-glow";
+import { AuroraBackground } from "@/components/motion/aurora-background";
 import { BatteryCoreVisual } from "@/components/motion/battery-core-visual";
 import { useAssistant } from "@/components/assistant/context";
 
@@ -16,20 +17,20 @@ export function Hero() {
 
   return (
     <section id="top" className="relative scroll-mt-28 overflow-hidden pb-20 pt-40 lg:pb-32 lg:pt-48">
-      <div className="absolute inset-0 bg-aurora-mesh" aria-hidden="true" />
+      <AuroraBackground />
       <div className="grid-bg absolute inset-0 h-[140%]" aria-hidden="true" />
-      <MouseGlow />
+      <MouseGlow color="rgba(0,32,91,0.08)" />
 
       {/* dynamic light beams */}
       <motion.div
         aria-hidden="true"
-        className="absolute -top-24 left-1/4 h-[520px] w-[2px] origin-top rotate-[18deg] bg-gradient-to-b from-quantum-electric-blue/60 via-quantum-electric-blue/10 to-transparent blur-[2px]"
+        className="absolute -top-24 left-1/4 h-[520px] w-[2px] origin-top rotate-[18deg] bg-gradient-to-b from-quantum-navy/60 via-quantum-navy/10 to-transparent blur-[2px]"
         animate={{ opacity: [0.3, 0.8, 0.3] }}
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         aria-hidden="true"
-        className="absolute -top-24 right-1/3 h-[420px] w-[2px] origin-top -rotate-[14deg] bg-gradient-to-b from-quantum-lithium-green/50 via-quantum-lithium-green/10 to-transparent blur-[2px]"
+        className="absolute -top-24 right-1/3 h-[420px] w-[2px] origin-top -rotate-[14deg] bg-gradient-to-b from-quantum-navy-light/50 via-quantum-navy-light/10 to-transparent blur-[2px]"
         animate={{ opacity: [0.6, 0.2, 0.6] }}
         transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -42,7 +43,7 @@ export function Hero() {
             transition={{ duration: 0.6 }}
           >
             <Badge>
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-quantum-lithium-green" />
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-quantum-navy-light" />
               Ingeniería en Litio · Bolivia
             </Badge>
           </motion.div>
@@ -50,7 +51,7 @@ export function Hero() {
           <TextReveal
             as="h1"
             text="Ingeniería de Litio para el Futuro Energético de Bolivia"
-            className="mt-6 max-w-xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]"
+            className="mt-6 max-w-xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]"
           />
 
           <motion.p
@@ -97,7 +98,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 1 }}
-            className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-white/10 pt-8"
+            className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-foreground/10 pt-8"
           >
             {[
               ["LiFePO4", "Química de última generación"],
@@ -105,7 +106,7 @@ export function Hero() {
               ["100% Bolivia", "Ingeniería y soporte local"],
             ].map(([title, sub]) => (
               <div key={title}>
-                <p className="text-sm font-semibold text-white">{title}</p>
+                <p className="text-sm font-semibold text-foreground">{title}</p>
                 <p className="text-xs text-muted-foreground">{sub}</p>
               </div>
             ))}
@@ -124,7 +125,7 @@ export function Hero() {
       <motion.a
         href="#trusted-by"
         aria-label="Desplázate hacia abajo"
-        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-white/40 lg:flex"
+        className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-foreground/40 lg:flex"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >

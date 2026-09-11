@@ -41,7 +41,7 @@ export function FAQ() {
           <TextReveal
             as="h2"
             text="Resolvemos tus dudas técnicas"
-            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
         </div>
 

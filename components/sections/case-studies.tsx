@@ -65,7 +65,7 @@ export function CaseStudies() {
           <TextReveal
             as="h2"
             text="Ingeniería aplicada en el terreno"
-            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
         </div>
 
@@ -75,31 +75,31 @@ export function CaseStudies() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 300, damping: 22 }}
-                className="group h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02]"
+                className="group h-full overflow-hidden rounded-2xl border border-foreground/10 bg-foreground/[0.02]"
               >
-                <div className="relative flex h-36 items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_120%,rgba(0,212,255,0.22),transparent_70%)]">
+                <div className="relative flex h-36 items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_50%_120%,rgba(0,32,91,0.14),transparent_70%)]">
                   <div className="grid-bg absolute inset-0 opacity-40" />
                   <motion.div
                     animate={{ scale: [1, 1.08, 1] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-black/40 text-quantum-electric-blue backdrop-blur"
+                    className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-foreground/10 bg-white/70 text-quantum-navy backdrop-blur"
                   >
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </motion.div>
                 </div>
 
                 <div className="p-6">
-                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-quantum-lithium-green">
+                  <span className="text-xs font-medium uppercase tracking-[0.2em] text-quantum-navy-light">
                     {sector}
                   </span>
-                  <h3 className="mt-2 text-lg font-semibold text-white">{title}</h3>
+                  <h3 className="mt-2 text-lg font-semibold text-foreground">{title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
                     {description}
                   </p>
-                  <div className="mt-6 flex gap-6 border-t border-white/10 pt-4">
+                  <div className="mt-6 flex gap-6 border-t border-foreground/10 pt-4">
                     {stats.map(([value, label]) => (
                       <div key={label}>
-                        <p className="font-mono text-lg font-semibold text-white">{value}</p>
+                        <p className="font-mono text-lg font-semibold text-foreground">{value}</p>
                         <p className="text-xs text-muted-foreground">{label}</p>
                       </div>
                     ))}

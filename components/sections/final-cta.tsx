@@ -15,10 +15,10 @@ export function FinalCTA() {
   return (
     <section className="relative overflow-hidden py-28 lg:py-36">
       <div className="absolute inset-0 bg-aurora-mesh" aria-hidden="true" />
-      <MouseGlow size={640} color="rgba(0,255,136,0.14)" />
+      <MouseGlow size={640} color="rgba(73,104,162,0.1)" />
       <motion.div
         aria-hidden
-        className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-quantum-electric-blue/10 blur-[120px]"
+        className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-quantum-navy/10 blur-[120px]"
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -27,7 +27,7 @@ export function FinalCTA() {
         <TextReveal
           as="h2"
           text="Construyamos la Próxima Generación de Energía"
-          className="mx-auto max-w-3xl justify-center text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl"
+          className="mx-auto max-w-3xl justify-center text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-5xl"
         />
         <motion.p
           initial={{ opacity: 0, y: 16 }}

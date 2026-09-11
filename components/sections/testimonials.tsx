@@ -56,7 +56,7 @@ export function Testimonials() {
           <TextReveal
             as="h2"
             text="La confianza de quienes ya modernizaron su energía"
-            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
         </div>
 
@@ -66,7 +66,7 @@ export function Testimonials() {
           onMouseLeave={() => setPaused(false)}
         >
           <div className="glass relative min-h-[260px] overflow-hidden rounded-3xl p-8 sm:p-12">
-            <Quote className="h-10 w-10 text-quantum-electric-blue/30" />
+            <Quote className="h-10 w-10 text-quantum-navy/30" />
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -77,15 +77,15 @@ export function Testimonials() {
               >
                 <div className="mb-4 mt-4 flex gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-quantum-lithium-green text-quantum-lithium-green" />
+                    <Star key={i} className="h-4 w-4 fill-quantum-navy-light text-quantum-navy-light" />
                   ))}
                 </div>
-                <p className="text-balance text-lg leading-relaxed text-white sm:text-xl">
+                <p className="text-balance text-lg leading-relaxed text-foreground sm:text-xl">
                   “{current.quote}”
                 </p>
                 <div className="mt-6">
-                  <p className="text-sm font-semibold text-white">{current.role}</p>
-                  <p className="text-xs text-quantum-electric-blue">{current.sector}</p>
+                  <p className="text-sm font-semibold text-foreground">{current.role}</p>
+                  <p className="text-xs text-quantum-navy">{current.sector}</p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -95,7 +95,7 @@ export function Testimonials() {
             <button
               aria-label="Testimonio anterior"
               onClick={() => setIndex((i) => (i - 1 + testimonials.length) % testimonials.length)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-primary/50 hover:text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-colors hover:border-primary/50 hover:text-foreground"
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
@@ -106,7 +106,7 @@ export function Testimonials() {
                   aria-label={`Ir al testimonio ${i + 1}`}
                   onClick={() => setIndex(i)}
                   className={`h-1.5 rounded-full transition-all ${
-                    i === index ? "w-6 bg-quantum-electric-blue" : "w-1.5 bg-white/20"
+                    i === index ? "w-6 bg-quantum-navy" : "w-1.5 bg-foreground/20"
                   }`}
                 />
               ))}
@@ -114,7 +114,7 @@ export function Testimonials() {
             <button
               aria-label="Siguiente testimonio"
               onClick={() => setIndex((i) => (i + 1) % testimonials.length)}
-              className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/60 transition-colors hover:border-primary/50 hover:text-white"
+              className="flex h-9 w-9 items-center justify-center rounded-full border border-foreground/10 text-foreground/60 transition-colors hover:border-primary/50 hover:text-foreground"
             >
               <ChevronRight className="h-4 w-4" />
             </button>

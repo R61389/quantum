@@ -46,17 +46,15 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        // Quantum Batteries brand palette
+        // Quantum Batteries brand palette — QB 2026
         quantum: {
-          "electric-blue": "#00D4FF",
-          "lithium-green": "#00FF88",
-          "energy-cyan": "#00FFFF",
-          "carbon-black": "#050505",
-          "surface-dark": "#0A0A0A",
-          "surface-medium": "#111111",
-          "surface-light": "#181818",
+          navy: "#00205B", // primary
+          "navy-deep": "#00000F",
+          "navy-darker": "#000022",
+          "navy-dark": "#000E48",
+          "navy-mid": "#163269",
+          "navy-light": "#4968A2",
           white: "#FFFFFF",
-          gray: "#B5B5B5",
         },
       },
       borderRadius: {
@@ -66,9 +64,9 @@ const config: Config = {
       },
       backgroundImage: {
         "aurora-mesh":
-          "radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0,212,255,0.25), transparent), radial-gradient(ellipse 60% 50% at 80% 0%, rgba(0,255,136,0.18), transparent), radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,255,255,0.12), transparent)",
+          "radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0,32,91,0.10), transparent), radial-gradient(ellipse 60% 50% at 80% 0%, rgba(73,104,162,0.14), transparent), radial-gradient(ellipse 60% 40% at 50% 100%, rgba(22,50,105,0.08), transparent)",
         "grid-pattern":
-          "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(0,32,91,0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,32,91,0.055) 1px, transparent 1px)",
       },
       keyframes: {
         "accordion-down": {

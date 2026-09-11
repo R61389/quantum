@@ -7,7 +7,7 @@ import { SYMPTOMS, getSymptom, type DiagnosticResult } from "@/lib/assistant/dia
 import { useAssistant } from "../context";
 
 const SEVERITY_STYLES: Record<DiagnosticResult["severity"], string> = {
-  baja: "border-quantum-lithium-green/30 bg-quantum-lithium-green/10 text-quantum-lithium-green",
+  baja: "border-quantum-navy-light/30 bg-quantum-navy-light/10 text-quantum-navy-light",
   media: "border-amber-400/30 bg-amber-400/10 text-amber-400",
   alta: "border-red-400/30 bg-red-400/10 text-red-400",
 };
@@ -64,10 +64,10 @@ export function DiagnosticsView() {
             <button
               key={s.id}
               onClick={() => selectSymptom(s.id)}
-              className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-left text-sm text-white/85 transition-colors hover:border-primary/40 hover:bg-white/[0.05]"
+              className="flex items-center justify-between rounded-xl border border-foreground/10 bg-foreground/[0.02] px-4 py-3 text-left text-sm text-foreground/85 transition-colors hover:border-primary/40 hover:bg-foreground/[0.05]"
             >
               {s.label}
-              <ChevronRight className="h-4 w-4 text-white/30" />
+              <ChevronRight className="h-4 w-4 text-foreground/30" />
             </button>
           ))}
         </div>
@@ -82,17 +82,17 @@ export function DiagnosticsView() {
           {symptom.questions.map((_, i) => (
             <span
               key={i}
-              className={`h-1 flex-1 rounded-full ${i <= step ? "bg-quantum-electric-blue" : "bg-white/10"}`}
+              className={`h-1 flex-1 rounded-full ${i <= step ? "bg-quantum-navy" : "bg-foreground/10"}`}
             />
           ))}
         </div>
-        <p className="text-sm font-medium text-white">{question.question}</p>
+        <p className="text-sm font-medium text-foreground">{question.question}</p>
         <div className="mt-4 grid gap-2">
           {question.options.map((opt) => (
             <button
               key={opt.id}
               onClick={() => answer(question.id, opt.id)}
-              className="rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-left text-sm text-white/85 transition-colors hover:border-primary/40 hover:bg-white/[0.05]"
+              className="rounded-xl border border-foreground/10 bg-foreground/[0.02] px-4 py-3 text-left text-sm text-foreground/85 transition-colors hover:border-primary/40 hover:bg-foreground/[0.05]"
             >
               {opt.label}
             </button>
@@ -114,14 +114,14 @@ export function DiagnosticsView() {
           {SEVERITY_LABEL[result.severity]}
         </div>
 
-        <h3 className="mt-4 text-base font-semibold text-white">{result.title}</h3>
+        <h3 className="mt-4 text-base font-semibold text-foreground">{result.title}</h3>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{result.explanation}</p>
 
-        <div className="mt-4 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-quantum-electric-blue">
+        <div className="mt-4 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+          <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy">
             Acción recomendada
           </p>
-          <p className="mt-1.5 text-sm text-white/85">{result.recommendedAction}</p>
+          <p className="mt-1.5 text-sm text-foreground/85">{result.recommendedAction}</p>
         </div>
 
         {result.safetyWarning && (
@@ -131,7 +131,7 @@ export function DiagnosticsView() {
           </div>
         )}
 
-        <p className="mt-4 text-xs text-white/40">
+        <p className="mt-4 text-xs text-foreground/40">
           Este es un diagnóstico preliminar automatizado, no reemplaza la
           evaluación de un técnico.
         </p>
@@ -139,13 +139,13 @@ export function DiagnosticsView() {
         <div className="mt-5 flex flex-col gap-2">
           <button
             onClick={saveAndContinue}
-            className="rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)] px-5 py-3 text-sm font-medium text-black"
+            className="rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)] px-5 py-3 text-sm font-medium text-white"
           >
             Continuar y hablar con un ingeniero
           </button>
           <button
             onClick={() => setSymptomId(null)}
-            className="rounded-full border border-white/10 px-5 py-3 text-sm text-white/70 hover:text-white"
+            className="rounded-full border border-foreground/10 px-5 py-3 text-sm text-foreground/70 hover:text-foreground"
           >
             Elegir otro síntoma
           </button>

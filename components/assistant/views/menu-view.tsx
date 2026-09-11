@@ -46,13 +46,13 @@ export function MenuView() {
           <button
             key={mode}
             onClick={() => setMode(mode)}
-            className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.02] p-4 text-left transition-colors hover:border-primary/40 hover:bg-white/[0.04]"
+            className="group flex items-start gap-3 rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-4 text-left transition-colors hover:border-primary/40 hover:bg-foreground/[0.04]"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-quantum-surface-light text-quantum-electric-blue">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-muted text-quantum-navy">
               <Icon className="h-5 w-5" strokeWidth={1.75} />
             </span>
             <span>
-              <span className="block text-sm font-semibold text-white">{title}</span>
+              <span className="block text-sm font-semibold text-foreground">{title}</span>
               <span className="mt-0.5 block text-xs leading-relaxed text-muted-foreground">
                 {description}
               </span>

@@ -28,7 +28,7 @@ export function BmsSystem() {
           <TextReveal
             as="h2"
             text="Cada celda, monitoreada en tiempo real"
-            className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mt-5 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
           <p className="mt-4 max-w-md text-balance text-muted-foreground">
             Nuestro sistema de gestión de batería (BMS) opera como el sistema
@@ -40,11 +40,11 @@ export function BmsSystem() {
             {features.map(({ icon: Icon, title, description }) => (
               <StaggerItem key={title}>
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-white/10 bg-quantum-surface-light text-quantum-lithium-green">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-foreground/10 bg-muted text-quantum-navy-light">
                     <Icon className="h-5 w-5" strokeWidth={1.75} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-white">{title}</h3>
+                    <h3 className="text-sm font-semibold text-foreground">{title}</h3>
                     <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
                       {description}
                     </p>
@@ -64,13 +64,13 @@ export function BmsSystem() {
         >
           <div className="mb-6 flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <Activity className="h-4 w-4 text-quantum-lithium-green" />
-              <span className="font-mono text-xs uppercase tracking-widest text-white/60">
+              <Activity className="h-4 w-4 text-quantum-navy-light" />
+              <span className="font-mono text-xs uppercase tracking-widest text-foreground/60">
                 BMS · Estado del Pack
               </span>
             </div>
-            <span className="flex items-center gap-1.5 rounded-full border border-quantum-lithium-green/30 bg-quantum-lithium-green/10 px-2.5 py-1 text-[0.65rem] font-medium text-quantum-lithium-green">
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-quantum-lithium-green" />
+            <span className="flex items-center gap-1.5 rounded-full border border-quantum-navy-light/30 bg-quantum-navy-light/10 px-2.5 py-1 text-[0.65rem] font-medium text-quantum-navy-light">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-quantum-navy-light" />
               En línea
             </span>
           </div>
@@ -81,9 +81,9 @@ export function BmsSystem() {
               return (
                 <div
                   key={i}
-                  className="relative flex flex-col items-center gap-2 rounded-lg border border-white/10 bg-black/30 p-3"
+                  className="relative flex flex-col items-center gap-2 rounded-lg border border-foreground/10 bg-muted p-3"
                 >
-                  <div className="relative h-16 w-3 overflow-hidden rounded-full bg-white/[0.06]">
+                  <div className="relative h-16 w-3 overflow-hidden rounded-full bg-foreground/[0.06]">
                     <motion.div
                       initial={{ height: 0 }}
                       whileInView={{ height: `${v}%` }}
@@ -92,11 +92,11 @@ export function BmsSystem() {
                       className={`absolute bottom-0 w-full rounded-full ${
                         isWarning
                           ? "bg-amber-400"
-                          : "bg-[linear-gradient(180deg,#00FF88,#00D4FF)]"
+                          : "bg-[linear-gradient(180deg,#4968A2,#00205B)]"
                       }`}
                     />
                   </div>
-                  <span className={`font-mono text-[0.65rem] ${isWarning ? "text-amber-400" : "text-white/50"}`}>
+                  <span className={`font-mono text-[0.65rem] ${isWarning ? "text-amber-400" : "text-foreground/50"}`}>
                     {v}%
                   </span>
                 </div>
@@ -104,7 +104,7 @@ export function BmsSystem() {
             })}
           </div>
 
-          <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4 text-xs text-white/50">
+          <div className="mt-6 flex items-center justify-between border-t border-foreground/10 pt-4 text-xs text-foreground/50">
             <span>16 celdas monitoreadas</span>
             <span className="flex items-center gap-1.5 text-amber-400">
               <ShieldAlert className="h-3.5 w-3.5" />1 celda en diagnóstico

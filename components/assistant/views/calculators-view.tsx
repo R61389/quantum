@@ -36,16 +36,16 @@ function NumberField({
 }) {
   return (
     <div>
-      <label className="text-xs font-medium text-white/60">{label}</label>
-      <div className="mt-1.5 flex items-center rounded-lg border border-white/10 bg-black/30 focus-within:border-primary/50">
+      <label className="text-xs font-medium text-foreground/60">{label}</label>
+      <div className="mt-1.5 flex items-center rounded-lg border border-foreground/10 bg-muted focus-within:border-primary/50">
         <input
           type="number"
           min={0}
           value={value}
           onChange={(e) => onChange(Number(e.target.value))}
-          className="w-full bg-transparent px-3 py-2.5 text-sm text-white outline-none"
+          className="w-full bg-transparent px-3 py-2.5 text-sm text-foreground outline-none"
         />
-        <span className="pr-3 text-xs text-white/40">{suffix}</span>
+        <span className="pr-3 text-xs text-foreground/40">{suffix}</span>
       </div>
     </div>
   );
@@ -54,14 +54,14 @@ function NumberField({
 function VoltageSelect({ value, onChange }: { value: number; onChange: (v: number) => void }) {
   return (
     <div>
-      <label className="text-xs font-medium text-white/60">Voltaje del sistema</label>
+      <label className="text-xs font-medium text-foreground/60">Voltaje del sistema</label>
       <select
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-1.5 w-full rounded-lg border border-white/10 bg-black/30 px-3 py-2.5 text-sm text-white outline-none focus:border-primary/50"
+        className="mt-1.5 w-full rounded-lg border border-foreground/10 bg-muted px-3 py-2.5 text-sm text-foreground outline-none focus:border-primary/50"
       >
         {VOLTAGE_OPTIONS.map((v) => (
-          <option key={v} value={v} className="bg-quantum-surface-dark">
+          <option key={v} value={v} className="bg-white">
             {v} V
           </option>
         ))}
@@ -72,7 +72,7 @@ function VoltageSelect({ value, onChange }: { value: number; onChange: (v: numbe
 
 function ResultCard({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4">{children}</div>
+    <div className="mt-5 rounded-xl border border-foreground/10 bg-foreground/[0.03] p-4">{children}</div>
   );
 }
 
@@ -80,17 +80,17 @@ function SuggestedProduct({ voltaje, requiredAh }: { voltaje: number; requiredAh
   const suggestion = suggestProductForCapacity(voltaje, requiredAh);
   if (!suggestion) {
     return (
-      <p className="mt-3 text-xs text-white/50">
+      <p className="mt-3 text-xs text-foreground/50">
         No hay productos en catálogo para {voltaje}V. Un ingeniero puede evaluar una solución a medida.
       </p>
     );
   }
   return (
-    <div className="mt-3 border-t border-white/10 pt-3">
-      <p className="text-xs font-medium uppercase tracking-wide text-quantum-electric-blue">
+    <div className="mt-3 border-t border-foreground/10 pt-3">
+      <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy">
         Modelo Quantum recomendado
       </p>
-      <p className="mt-1 text-sm font-semibold text-white">{suggestion.product.modelo}</p>
+      <p className="mt-1 text-sm font-semibold text-foreground">{suggestion.product.modelo}</p>
       <p className="text-xs text-muted-foreground">
         {suggestion.product.voltaje}V · {suggestion.product.ah}Ah
       </p>
@@ -141,13 +141,13 @@ export function CalculatorsView() {
 
   return (
     <div>
-      <div className="mb-5 grid grid-cols-4 gap-1 rounded-full border border-white/10 bg-white/[0.02] p-1">
+      <div className="mb-5 grid grid-cols-4 gap-1 rounded-full border border-foreground/10 bg-foreground/[0.02] p-1">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
             key={id}
             onClick={() => setTab(id)}
             className={`flex flex-col items-center gap-1 rounded-full py-2 text-[0.65rem] transition-colors ${
-              tab === id ? "bg-white/10 text-white" : "text-white/40 hover:text-white/70"
+              tab === id ? "bg-foreground/10 text-foreground" : "text-foreground/40 hover:text-foreground/70"
             }`}
           >
             <Icon className="h-4 w-4" />
@@ -163,14 +163,14 @@ export function CalculatorsView() {
             <NumberField label="Capacidad" value={ah1} onChange={setAh1} suffix="Ah" />
           </div>
           <ResultCard>
-            <p className="text-xs text-white/50">Energía total</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-electric-blue">
+            <p className="text-xs text-foreground/50">Energía total</p>
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
               {wh1.toLocaleString("es-BO")} Wh
             </p>
           </ResultCard>
           <button
             onClick={() => saveAndContinue(`${v1}V × ${ah1}Ah = ${wh1.toLocaleString("es-BO")} Wh`, "Ah → Wh")}
-            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)] px-5 py-3 text-sm font-medium text-black"
+            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)] px-5 py-3 text-sm font-medium text-white"
           >
             Enviar este cálculo a un ingeniero
           </button>
@@ -187,11 +187,11 @@ export function CalculatorsView() {
             <NumberField label="Consumo del equipo" value={load2} onChange={setLoad2} suffix="W" />
           </div>
           <ResultCard>
-            <p className="text-xs text-white/50">Autonomía estimada</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-electric-blue">
+            <p className="text-xs text-foreground/50">Autonomía estimada</p>
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
               {hours2.toFixed(1)} horas
             </p>
-            <p className="mt-1 text-[0.7rem] text-white/40">
+            <p className="mt-1 text-[0.7rem] text-foreground/40">
               Estimación con 80% de profundidad de descarga útil.
             </p>
           </ResultCard>
@@ -202,7 +202,7 @@ export function CalculatorsView() {
                 "Autonomía"
               )
             }
-            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)] px-5 py-3 text-sm font-medium text-black"
+            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)] px-5 py-3 text-sm font-medium text-white"
           >
             Enviar este cálculo a un ingeniero
           </button>
@@ -217,11 +217,11 @@ export function CalculatorsView() {
             <VoltageSelect value={v3} onChange={setV3} />
           </div>
           <ResultCard>
-            <p className="text-xs text-white/50">Capacidad mínima recomendada</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-electric-blue">
+            <p className="text-xs text-foreground/50">Capacidad mínima recomendada</p>
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
               {Math.round(solarResult.requiredAh).toLocaleString("es-BO")} Ah
             </p>
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-foreground/40">
               ({Math.round(solarResult.requiredWh).toLocaleString("es-BO")} Wh a {v3}V)
             </p>
             <SuggestedProduct voltaje={v3} requiredAh={solarResult.requiredAh} />
@@ -233,7 +233,7 @@ export function CalculatorsView() {
                 "Solar"
               )
             }
-            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)] px-5 py-3 text-sm font-medium text-black"
+            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)] px-5 py-3 text-sm font-medium text-white"
           >
             Enviar este cálculo a un ingeniero
           </button>
@@ -248,11 +248,11 @@ export function CalculatorsView() {
             <VoltageSelect value={v4} onChange={setV4} />
           </div>
           <ResultCard>
-            <p className="text-xs text-white/50">Capacidad requerida</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-electric-blue">
+            <p className="text-xs text-foreground/50">Capacidad requerida</p>
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
               {Math.round(upsResult.requiredAh).toLocaleString("es-BO")} Ah
             </p>
-            <p className="text-xs text-white/40">
+            <p className="text-xs text-foreground/40">
               ({Math.round(upsResult.requiredWh).toLocaleString("es-BO")} Wh a {v4}V)
             </p>
             <SuggestedProduct voltaje={v4} requiredAh={upsResult.requiredAh} />
@@ -264,7 +264,7 @@ export function CalculatorsView() {
                 "UPS"
               )
             }
-            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)] px-5 py-3 text-sm font-medium text-black"
+            className="mt-4 w-full rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)] px-5 py-3 text-sm font-medium text-white"
           >
             Enviar este cálculo a un ingeniero
           </button>

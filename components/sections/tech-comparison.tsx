@@ -50,16 +50,16 @@ function AnimatedBar({ label, value, note }: { label: string; value: number; not
   return (
     <div>
       <div className="mb-2 flex items-baseline justify-between">
-        <span className="text-sm font-medium text-white">{label}</span>
-        <span className="font-mono text-sm text-quantum-electric-blue">{value}</span>
+        <span className="text-sm font-medium text-foreground">{label}</span>
+        <span className="font-mono text-sm text-quantum-navy">{value}</span>
       </div>
-      <div className="h-2 w-full overflow-hidden rounded-full bg-white/[0.06]">
+      <div className="h-2 w-full overflow-hidden rounded-full bg-foreground/[0.06]">
         <motion.div
           initial={{ width: 0 }}
           whileInView={{ width: `${value}%` }}
           viewport={{ once: true }}
           transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
-          className="h-full rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)]"
+          className="h-full rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)]"
         />
       </div>
       <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{note}</p>
@@ -81,7 +81,7 @@ export function TechComparison() {
           <TextReveal
             as="h2"
             text="Comparador de químicas de batería"
-            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl"
+            className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
           <p className="mx-auto mt-4 max-w-lg text-balance text-muted-foreground">
             Elegimos la química adecuada según seguridad, ciclo de vida y
@@ -98,7 +98,7 @@ export function TechComparison() {
                     {active === key && (
                       <motion.span
                         layoutId="chemistry-pill"
-                        className="absolute inset-0 rounded-full bg-[linear-gradient(90deg,#00D4FF,#00FF88)]"
+                        className="absolute inset-0 rounded-full bg-[linear-gradient(90deg,#00205B,#4968A2)]"
                         transition={{ type: "spring", stiffness: 350, damping: 30 }}
                       />
                     )}
@@ -111,12 +111,12 @@ export function TechComparison() {
             {(Object.keys(profiles) as Chemistry[]).map((key) => (
               <TabsContent key={key} value={key}>
                 <div className="glass rounded-3xl p-8 sm:p-10">
-                  <div className="flex flex-col gap-2 border-b border-white/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex flex-col gap-2 border-b border-foreground/10 pb-6 sm:flex-row sm:items-center sm:justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold text-white">{profile.name}</h3>
+                      <h3 className="text-xl font-semibold text-foreground">{profile.name}</h3>
                       <p className="mt-1 text-sm text-muted-foreground">{profile.tagline}</p>
                     </div>
-                    <div className="flex items-center gap-2 text-xs text-quantum-lithium-green">
+                    <div className="flex items-center gap-2 text-xs text-quantum-navy-light">
                       <ShieldCheck className="h-4 w-4" />
                       {active === "lifepo4" ? "Recomendado para uso industrial" : "Ideal para alta densidad"}
                     </div>
@@ -128,10 +128,10 @@ export function TechComparison() {
                     ))}
                   </div>
 
-                  <div className="mt-8 flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.02] p-4">
-                    <Gauge className="mt-0.5 h-4 w-4 shrink-0 text-quantum-electric-blue" />
+                  <div className="mt-8 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+                    <Gauge className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
                     <div>
-                      <p className="text-sm font-medium text-white">Aplicaciones recomendadas</p>
+                      <p className="text-sm font-medium text-foreground">Aplicaciones recomendadas</p>
                       <p className="mt-1 text-sm text-muted-foreground">{profile.applications}</p>
                     </div>
                   </div>

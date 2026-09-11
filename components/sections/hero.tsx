@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
 import { MouseGlow } from "@/components/motion/mouse-glow";
-import { AuroraBackground } from "@/components/motion/aurora-background";
 import { BatteryCoreVisual } from "@/components/motion/battery-core-visual";
 import { useAssistant } from "@/components/assistant/context";
 
@@ -17,7 +16,6 @@ export function Hero() {
 
   return (
     <section id="top" className="relative scroll-mt-28 overflow-hidden pb-20 pt-40 lg:pb-32 lg:pt-48">
-      <AuroraBackground />
       <div className="grid-bg absolute inset-0 h-[140%]" aria-hidden="true" />
       <MouseGlow color="rgba(0,32,91,0.08)" />
 

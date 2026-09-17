@@ -51,7 +51,7 @@ function AnimatedBar({ label, value, note }: { label: string; value: number; not
     <div>
       <div className="mb-2 flex items-baseline justify-between">
         <span className="text-sm font-medium text-foreground">{label}</span>
-        <span className="font-mono text-sm text-quantum-navy">{value}</span>
+        <span className="font-mono text-sm text-quantum-navy-light">{value}</span>
       </div>
       <div className="h-2 w-full overflow-hidden rounded-full bg-foreground/[0.06]">
         <motion.div
@@ -129,7 +129,7 @@ export function TechComparison() {
                   </div>
 
                   <div className="mt-8 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-                    <Gauge className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
+                    <Gauge className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy-light" />
                     <div>
                       <p className="text-sm font-medium text-foreground">Aplicaciones recomendadas</p>
                       <p className="mt-1 text-sm text-muted-foreground">{profile.applications}</p>

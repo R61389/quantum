@@ -82,7 +82,7 @@ export function CaseStudies() {
                   <motion.div
                     animate={{ scale: [1, 1.08, 1] }}
                     transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                    className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-foreground/10 bg-white/70 text-quantum-navy backdrop-blur"
+                    className="relative flex h-16 w-16 items-center justify-center rounded-2xl border border-foreground/10 bg-white/80 text-quantum-navy backdrop-blur"
                   >
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </motion.div>

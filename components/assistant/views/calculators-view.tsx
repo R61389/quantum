@@ -87,7 +87,7 @@ function SuggestedProduct({ voltaje, requiredAh }: { voltaje: number; requiredAh
   }
   return (
     <div className="mt-3 border-t border-foreground/10 pt-3">
-      <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy">
+      <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy-light">
         Modelo Quantum recomendado
       </p>
       <p className="mt-1 text-sm font-semibold text-foreground">{suggestion.product.modelo}</p>
@@ -164,7 +164,7 @@ export function CalculatorsView() {
           </div>
           <ResultCard>
             <p className="text-xs text-foreground/50">Energía total</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy-light">
               {wh1.toLocaleString("es-BO")} Wh
             </p>
           </ResultCard>
@@ -188,7 +188,7 @@ export function CalculatorsView() {
           </div>
           <ResultCard>
             <p className="text-xs text-foreground/50">Autonomía estimada</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy-light">
               {hours2.toFixed(1)} horas
             </p>
             <p className="mt-1 text-[0.7rem] text-foreground/40">
@@ -218,7 +218,7 @@ export function CalculatorsView() {
           </div>
           <ResultCard>
             <p className="text-xs text-foreground/50">Capacidad mínima recomendada</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy-light">
               {Math.round(solarResult.requiredAh).toLocaleString("es-BO")} Ah
             </p>
             <p className="text-xs text-foreground/40">
@@ -249,7 +249,7 @@ export function CalculatorsView() {
           </div>
           <ResultCard>
             <p className="text-xs text-foreground/50">Capacidad requerida</p>
-            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy">
+            <p className="mt-1 font-mono text-2xl font-bold text-quantum-navy-light">
               {Math.round(upsResult.requiredAh).toLocaleString("es-BO")} Ah
             </p>
             <p className="text-xs text-foreground/40">

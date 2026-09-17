@@ -19,13 +19,13 @@ export function Stats() {
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {stats.map(({ icon: Icon, value, suffix, label }, i) => (
             <ScrollReveal key={label} delay={i * 0.08} className="text-center">
-              <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/[0.03] text-quantum-navy">
+              <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl border border-foreground/10 bg-foreground/[0.03] text-quantum-navy-light">
                 <Icon className="h-5 w-5" strokeWidth={1.75} />
               </div>
               <AnimatedCounter
                 value={value}
                 suffix={suffix}
-                className="block bg-[linear-gradient(90deg,#00205B,#4968A2)] bg-clip-text font-mono text-3xl font-bold text-transparent sm:text-4xl"
+                className="block bg-[linear-gradient(90deg,#4968A2,#FFFFFF)] bg-clip-text font-mono text-3xl font-bold text-transparent sm:text-4xl"
               />
               <p className="mt-2 text-xs text-muted-foreground sm:text-sm">{label}</p>
             </ScrollReveal>

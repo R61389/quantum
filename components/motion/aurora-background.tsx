@@ -12,35 +12,35 @@ interface AuroraBackgroundProps {
 
 const blobs = [
   {
-    color: "rgba(0,32,91,0.22)",
+    color: "rgba(73,104,162,0.4)",
     size: "46rem",
     start: { top: "-12%", left: "2%" },
     drift: { x: [0, 70, -25, 0], y: [0, 50, 20, 0] },
     duration: 26,
   },
   {
-    color: "rgba(73,104,162,0.24)",
+    color: "rgba(22,50,105,0.45)",
     size: "40rem",
     start: { top: "4%", right: "-4%" },
     drift: { x: [0, -55, 35, 0], y: [0, 35, -25, 0] },
     duration: 32,
   },
   {
-    color: "rgba(22,50,105,0.2)",
+    color: "rgba(73,104,162,0.35)",
     size: "38rem",
     start: { top: "42%", left: "-6%" },
     drift: { x: [0, 45, -35, 0], y: [0, -35, 25, 0] },
     duration: 30,
   },
   {
-    color: "rgba(0,32,91,0.18)",
+    color: "rgba(0,32,91,0.5)",
     size: "42rem",
     start: { top: "58%", right: "6%" },
     drift: { x: [0, -40, 30, 0], y: [0, 30, -30, 0] },
     duration: 36,
   },
   {
-    color: "rgba(73,104,162,0.16)",
+    color: "rgba(22,50,105,0.4)",
     size: "34rem",
     start: { bottom: "-10%", left: "30%" },
     drift: { x: [0, 40, -40, 0], y: [0, -25, 25, 0] },
@@ -49,8 +49,8 @@ const blobs = [
 ];
 
 /**
- * Light-mode aurora backdrop — soft, slowly drifting navy/steel-blue color
- * bands blurred behind the page content. Adapted from the community Aurora
+ * Dark-mode aurora backdrop — soft, slowly drifting navy/steel-blue glows
+ * blurred behind the page content. Adapted from the community Aurora
  * Background pattern (21st.dev / Aceternity) for this project's Tailwind +
  * Motion stack and the QB 2026 navy palette; 21st.dev's own CLI pull
  * requires an account API key this session doesn't have, so the effect is

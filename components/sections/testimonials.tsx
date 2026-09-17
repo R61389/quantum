@@ -66,7 +66,7 @@ export function Testimonials() {
           onMouseLeave={() => setPaused(false)}
         >
           <div className="glass relative min-h-[260px] overflow-hidden rounded-3xl p-8 sm:p-12">
-            <Quote className="h-10 w-10 text-quantum-navy/30" />
+            <Quote className="h-10 w-10 text-quantum-navy-light/30" />
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
@@ -85,7 +85,7 @@ export function Testimonials() {
                 </p>
                 <div className="mt-6">
                   <p className="text-sm font-semibold text-foreground">{current.role}</p>
-                  <p className="text-xs text-quantum-navy">{current.sector}</p>
+                  <p className="text-xs text-quantum-navy-light">{current.sector}</p>
                 </div>
               </motion.div>
             </AnimatePresence>

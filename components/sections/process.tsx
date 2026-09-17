@@ -52,7 +52,7 @@ export function Process() {
                 transition={{ duration: 0.6, delay: i * 0.12, ease: [0.16, 1, 0.3, 1] }}
                 className="relative flex gap-5 lg:flex-col lg:gap-4"
               >
-                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-quantum-navy/40 bg-background text-quantum-navy shadow-[0_0_20px_-4px_rgba(0,32,91,0.35)]">
+                <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-quantum-navy-light/50 bg-background text-quantum-navy-light shadow-[0_0_20px_-4px_rgba(73,104,162,0.55)]">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </div>
                 <div>

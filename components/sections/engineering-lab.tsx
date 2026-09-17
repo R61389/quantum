@@ -58,7 +58,7 @@ export function EngineeringLab() {
                   animate={{ x: ["-100%", "100%"] }}
                   transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                 />
-                <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-foreground/10 bg-muted text-quantum-navy">
+                <div className="flex h-11 w-11 items-center justify-center rounded-lg border border-foreground/10 bg-muted text-quantum-navy-light">
                   <Icon className="h-5 w-5" strokeWidth={1.75} />
                 </div>
                 <h3 className="mt-4 text-base font-semibold text-foreground">{title}</h3>

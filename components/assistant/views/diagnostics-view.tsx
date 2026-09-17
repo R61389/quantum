@@ -118,7 +118,7 @@ export function DiagnosticsView() {
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{result.explanation}</p>
 
         <div className="mt-4 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-          <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy">
+          <p className="text-xs font-medium uppercase tracking-wide text-quantum-navy-light">
             Acción recomendada
           </p>
           <p className="mt-1.5 text-sm text-foreground/85">{result.recommendedAction}</p>

@@ -81,18 +81,18 @@ export function Solutions() {
                   className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                   style={{
                     background:
-                      "radial-gradient(400px circle at 50% 0%, rgba(0,212,255,0.12), transparent 60%)",
+                      "radial-gradient(400px circle at 50% 0%, rgba(73,104,162,0.25), transparent 60%)",
                   }}
                 />
                 <div className="relative">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/10 bg-gradient-to-br from-quantum-navy/15 to-quantum-navy-light/10 text-quantum-navy transition-colors group-hover:text-quantum-navy-light">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-foreground/10 bg-gradient-to-br from-quantum-navy/30 to-quantum-navy-light/20 text-quantum-navy-light transition-colors group-hover:text-white">
                     <Icon className="h-6 w-6" strokeWidth={1.75} />
                   </div>
                   <h3 className="mt-5 text-lg font-semibold text-foreground">{title}</h3>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">
                     {description}
                   </p>
-                  <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-quantum-navy opacity-0 transition-all duration-300 group-hover:opacity-100">
+                  <div className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-quantum-navy-light opacity-0 transition-all duration-300 group-hover:opacity-100">
                     Conocer más
                     <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>

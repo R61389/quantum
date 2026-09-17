@@ -51,7 +51,7 @@ export function SummaryView() {
 
       {collected.diagnostico && (
         <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-          <Stethoscope className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
+          <Stethoscope className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy-light" />
           <div>
             <p className="text-xs font-medium text-foreground">{collected.diagnostico.symptomLabel}</p>
             <p className="mt-0.5 text-xs text-muted-foreground">{collected.diagnostico.result.title}</p>
@@ -61,7 +61,7 @@ export function SummaryView() {
 
       {collected.bateriaActual && (
         <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-          <ScanSearch className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
+          <ScanSearch className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy-light" />
           <div>
             <p className="text-xs font-medium text-foreground">
               {collected.bateriaActual.modelo || "Batería identificada"}
@@ -76,7 +76,7 @@ export function SummaryView() {
 
       {collected.calculo && (
         <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-          <Calculator className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy" />
+          <Calculator className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy-light" />
           <div>
             <p className="text-xs font-medium text-foreground">Cálculo: {collected.calculo.tipo}</p>
             <p className="mt-0.5 text-xs text-muted-foreground">{collected.calculo.resumen}</p>

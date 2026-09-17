@@ -64,9 +64,9 @@ const config: Config = {
       },
       backgroundImage: {
         "aurora-mesh":
-          "radial-gradient(ellipse 80% 50% at 20% -10%, rgba(0,32,91,0.10), transparent), radial-gradient(ellipse 60% 50% at 80% 0%, rgba(73,104,162,0.14), transparent), radial-gradient(ellipse 60% 40% at 50% 100%, rgba(22,50,105,0.08), transparent)",
+          "radial-gradient(ellipse 80% 50% at 20% -10%, rgba(73,104,162,0.28), transparent), radial-gradient(ellipse 60% 50% at 80% 0%, rgba(22,50,105,0.3), transparent), radial-gradient(ellipse 60% 40% at 50% 100%, rgba(0,32,91,0.24), transparent)",
         "grid-pattern":
-          "linear-gradient(to right, rgba(0,32,91,0.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,32,91,0.055) 1px, transparent 1px)",
+          "linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px)",
       },
       keyframes: {
         "accordion-down": {

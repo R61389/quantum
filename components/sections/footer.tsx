@@ -85,19 +85,19 @@ export function Footer() {
             <h3 className="text-sm font-semibold text-foreground">Contacto</h3>
             <ul className="mt-4 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2.5">
-                <Mail className="h-4 w-4 shrink-0 text-quantum-navy" />
+                <Mail className="h-4 w-4 shrink-0 text-quantum-navy-light" />
                 <a href={`mailto:${contact.email}`} className="hover:text-foreground">
                   {contact.email}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="h-4 w-4 shrink-0 text-quantum-navy" />
+                <Phone className="h-4 w-4 shrink-0 text-quantum-navy-light" />
                 <a href={`tel:${contact.phone.replace(/\s+/g, "")}`} className="hover:text-foreground">
                   {contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <MapPin className="h-4 w-4 shrink-0 text-quantum-navy" />
+                <MapPin className="h-4 w-4 shrink-0 text-quantum-navy-light" />
                 {contact.location}
               </li>
             </ul>

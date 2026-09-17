@@ -47,7 +47,7 @@ export function IdentifyView() {
     return (
       <div>
         <div className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
-          <p className="mb-2 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-quantum-navy">
+          <p className="mb-2 flex items-center gap-1.5 text-xs font-medium uppercase tracking-wide text-quantum-navy-light">
             <CheckCircle2 className="h-3.5 w-3.5" /> Batería Actual
           </p>
           <dl className="grid grid-cols-2 gap-y-1.5 text-sm">
@@ -99,7 +99,7 @@ export function IdentifyView() {
               return (
                 <div key={label} className="rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-medium text-quantum-navy">{label}</span>
+                    <span className="text-xs font-medium text-quantum-navy-light">{label}</span>
                     {option.benefitPercent > 0 && (
                       <span className="rounded-full bg-quantum-navy-light/10 px-2 py-0.5 text-[0.65rem] text-quantum-navy-light">
                         +{option.benefitPercent}% energía

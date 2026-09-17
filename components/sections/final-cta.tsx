@@ -15,7 +15,7 @@ export function FinalCTA() {
   return (
     <section className="relative overflow-hidden py-28 lg:py-36">
       <div className="absolute inset-0 bg-aurora-mesh" aria-hidden="true" />
-      <MouseGlow size={640} color="rgba(73,104,162,0.1)" />
+      <MouseGlow size={640} color="rgba(73,104,162,0.28)" />
       <motion.div
         aria-hidden
         className="absolute left-1/2 top-1/2 h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-quantum-navy/10 blur-[120px]"

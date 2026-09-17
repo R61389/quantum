@@ -17,7 +17,7 @@ export function Hero() {
   return (
     <section id="top" className="relative scroll-mt-28 overflow-hidden pb-20 pt-40 lg:pb-32 lg:pt-48">
       <div className="grid-bg absolute inset-0 h-[140%]" aria-hidden="true" />
-      <MouseGlow color="rgba(0,32,91,0.08)" />
+      <MouseGlow color="rgba(73,104,162,0.25)" />
 
       {/* dynamic light beams */}
       <motion.div

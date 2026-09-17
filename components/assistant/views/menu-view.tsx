@@ -48,7 +48,7 @@ export function MenuView() {
             onClick={() => setMode(mode)}
             className="group flex items-start gap-3 rounded-2xl border border-foreground/10 bg-foreground/[0.02] p-4 text-left transition-colors hover:border-primary/40 hover:bg-foreground/[0.04]"
           >
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-muted text-quantum-navy">
+            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-foreground/10 bg-muted text-quantum-navy-light">
               <Icon className="h-5 w-5" strokeWidth={1.75} />
             </span>
             <span>

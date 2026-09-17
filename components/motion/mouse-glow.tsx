@@ -11,7 +11,7 @@ interface MouseGlowProps {
 }
 
 /** A soft radial light that follows the cursor within its parent — used behind the hero. */
-export function MouseGlow({ className, size = 480, color = "rgba(0,32,91,0.08)" }: MouseGlowProps) {
+export function MouseGlow({ className, size = 480, color = "rgba(73,104,162,0.22)" }: MouseGlowProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const x = useMotionValue(0);
   const y = useMotionValue(0);

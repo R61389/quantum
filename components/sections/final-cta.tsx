@@ -48,7 +48,7 @@ export function FinalCTA() {
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <MagneticButton>
-            <Button size="lg" onClick={() => openAssistant("identificar")}>
+            <Button size="lg" onClick={() => openAssistant("comercial")}>
               Solicitar Cotización
               <ArrowRight className="h-4 w-4" />
             </Button>

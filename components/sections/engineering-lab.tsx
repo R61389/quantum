@@ -38,12 +38,13 @@ export function EngineeringLab() {
           </div>
           <TextReveal
             as="h2"
-            text="No solo vendemos baterías. Las diseñamos."
+            text="Ingeniería propia, no solo ensamblaje"
             className="mx-auto mt-5 justify-center text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl"
           />
           <p className="mx-auto mt-4 max-w-lg text-balance text-muted-foreground">
             Cada pack pasa por un proceso de ingeniería propio, desde el
-            diagnóstico de celdas hasta la programación del sistema BMS.
+            diagnóstico de celdas hasta la programación del sistema BMS — para
+            que tu operación tenga menos tiempos muertos y mayor confiabilidad.
           </p>
         </div>
 

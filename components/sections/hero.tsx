@@ -42,13 +42,13 @@ export function Hero() {
           >
             <Badge>
               <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-quantum-navy-light" />
-              Ingeniería en Litio · Bolivia
+              Soluciones Energéticas Industriales · Bolivia
             </Badge>
           </motion.div>
 
           <TextReveal
             as="h1"
-            text="Ingeniería de Litio para el Futuro Energético de Bolivia"
+            text="Cuéntanos qué necesitas. Diseñamos tu solución energética."
             className="mt-6 max-w-xl text-balance text-4xl font-semibold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[3.4rem]"
           />
 
@@ -58,9 +58,10 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.55 }}
             className="mt-6 max-w-lg text-balance text-lg leading-relaxed text-muted-foreground"
           >
-            Diseñamos, ensamblamos y modernizamos baterías de litio de alto
-            rendimiento para aplicaciones industriales, sistemas UPS, energía
-            solar, montacargas y soluciones energéticas especializadas.
+            No vendemos baterías: resolvemos desafíos energéticos de
+            industria, logística, minería, manufactura y agroindustria —
+            con soluciones de almacenamiento diseñadas a la medida de tu
+            operación, no packs genéricos de catálogo.
           </motion.p>
 
           <motion.div
@@ -73,9 +74,9 @@ export function Hero() {
               <Button
                 size="lg"
                 className="w-full sm:w-auto"
-                onClick={() => openAssistant("identificar")}
+                onClick={() => openAssistant("comercial")}
               >
-                Solicitar Cotización
+                Diseña tu Solución
                 <ArrowRight className="h-4 w-4" />
               </Button>
             </MagneticButton>
@@ -99,8 +100,8 @@ export function Hero() {
             className="mt-14 flex flex-wrap items-center gap-x-10 gap-y-4 border-t border-foreground/10 pt-8"
           >
             {[
-              ["LiFePO4", "Química de última generación"],
-              ["BMS Inteligente", "Monitoreo en tiempo real"],
+              ["Diseño a Medida", "Cada solución, adaptada a tu operación"],
+              ["Soporte de por Vida", "Te acompañamos, no solo vendemos"],
               ["100% Bolivia", "Ingeniería y soporte local"],
             ].map(([title, sub]) => (
               <div key={title}>

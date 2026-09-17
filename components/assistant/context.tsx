@@ -3,10 +3,12 @@
 import { createContext, useCallback, useContext, useMemo, useState } from "react";
 
 import type { DiagnosticResult } from "@/lib/assistant/diagnostics";
+import type { LeadAnswers, LeadScoreResult } from "@/lib/assistant/lead-scoring";
 
 export type AssistantMode =
   | "menu"
   | "faq"
+  | "comercial"
   | "diagnostico"
   | "identificar"
   | "calculadoras"
@@ -29,10 +31,16 @@ export interface CollectedCalculation {
   resumen: string;
 }
 
+export interface CollectedLead {
+  answers: LeadAnswers;
+  score: LeadScoreResult;
+}
+
 export interface CollectedContext {
   diagnostico?: CollectedDiagnostic;
   bateriaActual?: CollectedBattery;
   calculo?: CollectedCalculation;
+  lead?: CollectedLead;
 }
 
 interface AssistantContextValue {

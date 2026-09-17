@@ -1,20 +1,20 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Building2, Factory, GraduationCap, Landmark, Warehouse, Zap, Truck, Hospital } from "lucide-react";
+import { Building2, Factory, Boxes, Landmark, Warehouse, Zap, Truck, Wheat } from "lucide-react";
 
 import { Marquee } from "@/components/motion/marquee";
 
 // Placeholder sector badges — swap for real client/institution logos before launch.
 const sectors = [
-  { icon: Factory, label: "Industria Manufacturera" },
+  { icon: Factory, label: "Manufactura Industrial" },
   { icon: Warehouse, label: "Logística y Montacargas" },
   { icon: Zap, label: "Energía Solar" },
-  { icon: GraduationCap, label: "Universidades Técnicas" },
+  { icon: Boxes, label: "Centros de Distribución" },
   { icon: Landmark, label: "Sector Público" },
-  { icon: Building2, label: "Sector Minero" },
+  { icon: Building2, label: "Minería" },
   { icon: Truck, label: "Transporte y Flotas" },
-  { icon: Hospital, label: "Salud y Hospitales" },
+  { icon: Wheat, label: "Agroindustria" },
 ];
 
 export function TrustedBy() {

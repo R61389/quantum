@@ -1,34 +1,21 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Factory, Sun, BatteryCharging, Forklift, Car, Wrench } from "lucide-react";
+import { SlidersHorizontal, Sun, Forklift, Car } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { StaggerGroup, StaggerItem } from "@/components/motion/scroll-reveal";
 
-// Representative project archetypes by sector — replace with real client case
-// studies, photography, and verified metrics before production launch.
+// Representative project archetypes, alineados 1:1 con las 4 categorías de
+// Solutions — replace with real client case studies, photography, and
+// verified metrics before production launch.
 const cases = [
   {
-    icon: Factory,
-    sector: "Industria",
-    title: "Modernización Energética Industrial",
-    description: "Conversión de banco de baterías plomo-ácido a LiFePO4 en planta de producción continua.",
-    stats: [["-60%", "mantenimiento"], ["3x", "vida útil"]],
-  },
-  {
-    icon: Sun,
-    sector: "Energía Solar",
-    title: "Almacenamiento Solar de Alta Eficiencia",
-    description: "Sistema de respaldo solar con BMS inteligente para operación autónoma fuera de red.",
-    stats: [["98%", "eficiencia de ciclo"], ["10 años", "vida útil estimada"]],
-  },
-  {
-    icon: BatteryCharging,
-    sector: "Sistemas UPS",
-    title: "Respaldo Crítico sin Interrupciones",
-    description: "Migración de UPS convencional a litio para infraestructura de misión crítica.",
+    icon: SlidersHorizontal,
+    sector: "Soluciones Personalizadas",
+    title: "Almacenamiento a Medida para Operación Remota",
+    description: "Ingeniería de respaldo energético a medida para faena minera y maquinaria especializada fuera de red, con monitoreo remoto.",
     stats: [["-70%", "peso del sistema"], ["3x", "más rápida la carga"]],
   },
   {
@@ -39,18 +26,18 @@ const cases = [
     stats: [["-40%", "tiempo de inactividad"], ["0", "cambios de batería"]],
   },
   {
+    icon: Sun,
+    sector: "Energía Solar",
+    title: "Almacenamiento Solar de Alta Eficiencia",
+    description: "Sistema de respaldo solar con BMS inteligente para operación autónoma fuera de red.",
+    stats: [["98%", "eficiencia de ciclo"], ["10 años", "vida útil estimada"]],
+  },
+  {
     icon: Car,
     sector: "Electromovilidad",
     title: "Reemplazo de Packs para Electromovilidad",
     description: "Diseño y fabricación de packs de litio a medida con BMS propio.",
     stats: [["100%", "BMS a medida"], ["+", "diagnóstico por celda"]],
-  },
-  {
-    icon: Wrench,
-    sector: "Equipos Especializados",
-    title: "Soluciones a Medida para Maquinaria",
-    description: "Ingeniería de baterías personalizadas para equipos y maquinaria especializada.",
-    stats: [["100%", "diseño a medida"], ["24/7", "soporte técnico local"]],
   },
 ];
 
@@ -69,7 +56,7 @@ export function CaseStudies() {
           />
         </div>
 
-        <StaggerGroup className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <StaggerGroup className="mt-16 grid gap-5 sm:grid-cols-2">
           {cases.map(({ icon: Icon, sector, title, description, stats }) => (
             <StaggerItem key={title}>
               <motion.div

@@ -2,16 +2,16 @@ import { Zap, Mail, Phone, MapPin, Linkedin, Instagram, Facebook, Youtube } from
 
 const footerNav = {
   Empresa: [
+    { label: "Garantía y Soporte", href: "#garantia" },
     { label: "Laboratorio", href: "#laboratorio" },
     { label: "Casos de Éxito", href: "#casos-de-exito" },
     { label: "Proceso de Trabajo", href: "#proceso" },
     { label: "Preguntas Frecuentes", href: "#faq" },
   ],
   Soluciones: [
-    { label: "Conversión a Litio", href: "#soluciones" },
-    { label: "Sistemas UPS", href: "#soluciones" },
-    { label: "Energía Solar", href: "#soluciones" },
+    { label: "Soluciones Personalizadas", href: "#soluciones" },
     { label: "Montacargas", href: "#soluciones" },
+    { label: "Energía Solar", href: "#soluciones" },
     { label: "Electromovilidad", href: "#soluciones" },
   ],
 };

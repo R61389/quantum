@@ -10,6 +10,7 @@ import { useAssistant } from "@/components/assistant/context";
 
 const links = [
   { href: "#soluciones", label: "Soluciones" },
+  { href: "#garantia", label: "Garantía" },
   { href: "#tecnologia", label: "Tecnología" },
   { href: "#laboratorio", label: "Laboratorio" },
   { href: "#casos-de-exito", label: "Casos de Éxito" },
@@ -64,7 +65,7 @@ export function Navbar() {
 
           <div className="hidden lg:block">
             <MagneticButton>
-              <Button size="sm" onClick={() => openAssistant("identificar")}>
+              <Button size="sm" onClick={() => openAssistant("comercial")}>
                 Solicitar Cotización
               </Button>
             </MagneticButton>
@@ -105,7 +106,7 @@ export function Navbar() {
                 className="mt-2 w-full"
                 onClick={() => {
                   setOpen(false);
-                  openAssistant("identificar");
+                  openAssistant("comercial");
                 }}
               >
                 Solicitar Cotización

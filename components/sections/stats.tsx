@@ -16,6 +16,10 @@ export function Stats() {
   return (
     <section className="relative border-y border-foreground/5 py-20">
       <div className="container">
+        <p className="mx-auto mb-12 max-w-xl text-balance text-center text-sm text-muted-foreground">
+          Resultados que se traducen en menor costo operativo, mayor
+          disponibilidad y menos tiempos muertos para tu operación.
+        </p>
         <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
           {stats.map(({ icon: Icon, value, suffix, label }, i) => (
             <ScrollReveal key={label} delay={i * 0.08} className="text-center">

@@ -26,9 +26,9 @@ const testimonials = [
     sector: "Logística e Industria",
   },
   {
-    quote: "Quantum Batteries no vendió un producto genérico — diseñaron una solución específica para nuestro sistema UPS crítico.",
-    role: "Responsable de Infraestructura",
-    sector: "Sistemas UPS",
+    quote: "Quantum Batteries no vendió un producto genérico — diseñaron una solución específica para nuestra operación de electromovilidad.",
+    role: "Responsable de Flota",
+    sector: "Electromovilidad",
   },
 ];
 

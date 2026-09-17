@@ -20,14 +20,14 @@ export function WhatsAppFloatButton() {
             className="glass-strong hidden max-w-[220px] items-center gap-2 rounded-2xl px-4 py-3 text-xs text-foreground/80 shadow-xl sm:flex"
           >
             <Sparkles className="h-4 w-4 shrink-0 text-quantum-navy-light" />
-            Habla con nuestro asistente de baterías de litio
+            Cuéntanos qué necesitas — te conectamos con tu solución
           </motion.div>
         )}
       </AnimatePresence>
 
       <motion.button
         onClick={() => (isOpen ? closeAssistant() : openAssistant())}
-        aria-label={isOpen ? "Cerrar asistente" : "Abrir asistente de baterías de litio"}
+        aria-label={isOpen ? "Cerrar asistente" : "Abrir asesor comercial de Quantum Batteries"}
         whileHover={{ scale: 1.06 }}
         whileTap={{ scale: 0.94 }}
         className="relative flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_8px_30px_-6px_rgba(37,211,102,0.6)]"

@@ -1,4 +1,4 @@
-import { MessageCircle, Stethoscope, ScanSearch, Calculator, Inbox } from "lucide-react";
+import { MessageCircle, Stethoscope, ScanSearch, Calculator, Inbox, Flame } from "lucide-react";
 
 import { buildWhatsAppLink } from "@/lib/assistant/whatsapp";
 import { useAssistant, type CollectedContext } from "../context";
@@ -9,6 +9,16 @@ function buildSummaryMessage(collected: CollectedContext): string {
     "Usé el asistente virtual y esto es lo que recopilé:",
     "",
   ];
+
+  if (collected.lead) {
+    const { answers, score } = collected.lead;
+    lines.push(
+      `📊 ${score.tierLabel} (${score.score}/${score.maxScore} pts)`,
+      `→ Aplicación: ${answers.aplicacion}`,
+      `→ ¿Usa baterías hoy?: ${answers.usaBaterias === "si" ? "Sí" : "No"}`,
+      `→ Unidades requeridas: ${answers.unidades}`
+    );
+  }
 
   if (collected.diagnostico) {
     lines.push(
@@ -34,7 +44,9 @@ function buildSummaryMessage(collected: CollectedContext): string {
 
 export function SummaryView() {
   const { collected, resetCollected, setMode } = useAssistant();
-  const hasContext = Boolean(collected.diagnostico || collected.bateriaActual || collected.calculo);
+  const hasContext = Boolean(
+    collected.diagnostico || collected.bateriaActual || collected.calculo || collected.lead
+  );
 
   return (
     <div>
@@ -46,6 +58,18 @@ export function SummaryView() {
             identificación de batería o una calculadora, o escribe
             directamente a un ingeniero.
           </p>
+        </div>
+      )}
+
+      {collected.lead && (
+        <div className="mb-3 flex items-start gap-3 rounded-xl border border-foreground/10 bg-foreground/[0.02] p-4">
+          <Flame className="mt-0.5 h-4 w-4 shrink-0 text-quantum-navy-light" />
+          <div>
+            <p className="text-xs font-medium text-foreground">{collected.lead.score.tierLabel}</p>
+            <p className="mt-0.5 text-xs text-muted-foreground">
+              {collected.lead.answers.aplicacion} · {collected.lead.answers.unidades} unidades
+            </p>
+          </div>
         </div>
       )}
 

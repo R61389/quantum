@@ -6,6 +6,7 @@ import { TechComparison } from "@/components/sections/tech-comparison";
 import { EngineeringLab } from "@/components/sections/engineering-lab";
 import { BmsSystem } from "@/components/sections/bms-system";
 import { CaseStudies } from "@/components/sections/case-studies";
+import { LifetimePartner } from "@/components/sections/lifetime-partner";
 import { Process } from "@/components/sections/process";
 import { Stats } from "@/components/sections/stats";
 import { Testimonials } from "@/components/sections/testimonials";
@@ -21,6 +22,7 @@ export default function Home() {
         <Hero />
         <TrustedBy />
         <Solutions />
+        <LifetimePartner />
         <TechComparison />
         <EngineeringLab />
         <BmsSystem />

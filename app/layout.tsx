@@ -14,21 +14,22 @@ const siteUrl = "https://quantumbatteries.bo";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Quantum Batteries Bolivia | Ingeniería de Litio de Alto Rendimiento",
+    default: "Quantum Batteries Bolivia | Soluciones Energéticas Industriales",
     template: "%s | Quantum Batteries Bolivia",
   },
   description:
-    "Diseñamos, ensamblamos y modernizamos baterías de litio de alto rendimiento para aplicaciones industriales, sistemas UPS, energía solar, montacargas y soluciones energéticas especializadas en Bolivia.",
+    "Resolvemos desafíos energéticos de industria, logística, minería, manufactura y agroindustria con soluciones de almacenamiento en litio diseñadas a medida — solar, montacargas, electromovilidad y proyectos a medida, con acompañamiento durante toda la vida útil.",
   keywords: [
+    "soluciones energéticas industriales Bolivia",
+    "almacenamiento de energía a medida",
     "baterías de litio Bolivia",
     "ingeniería energética",
     "BMS inteligente",
     "conversión a litio",
     "LiFePO4",
-    "baterías UPS",
-    "baterías solares",
+    "baterías solares industriales",
     "baterías montacargas",
-    "almacenamiento energético",
+    "electromovilidad Bolivia",
   ],
   authors: [{ name: "Quantum Batteries Bolivia" }],
   openGraph: {
@@ -36,16 +37,16 @@ export const metadata: Metadata = {
     locale: "es_BO",
     url: siteUrl,
     siteName: "Quantum Batteries Bolivia",
-    title: "Ingeniería de Litio para el Futuro Energético de Bolivia",
+    title: "Cuéntanos qué necesitas. Diseñamos tu solución energética.",
     description:
-      "Diseño, ensamblaje y modernización de baterías de litio de alto rendimiento: industrial, UPS, solar, montacargas y soluciones a medida.",
+      "Soluciones de almacenamiento en litio diseñadas a medida para industria, logística, minería, manufactura y agroindustria — con acompañamiento durante toda la vida útil de la batería.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Quantum Batteries Bolivia | Ingeniería de Litio",
+    title: "Quantum Batteries Bolivia | Soluciones Energéticas Industriales",
     description:
-      "Diseño, ensamblaje y modernización de baterías de litio de alto rendimiento para Bolivia.",
+      "Soluciones de almacenamiento en litio diseñadas a medida para tu operación, con acompañamiento durante toda la vida útil de la batería.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -55,8 +56,8 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#00205B",
-  colorScheme: "light",
+  themeColor: "#05070D",
+  colorScheme: "dark",
   width: "device-width",
   initialScale: 1,
 };

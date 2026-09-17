@@ -32,8 +32,9 @@ export function BmsSystem() {
           />
           <p className="mt-4 max-w-md text-balance text-muted-foreground">
             Nuestro sistema de gestión de batería (BMS) opera como el sistema
-            nervioso del pack — inspirado en la filosofía de monitoreo de
-            Tesla Energy — protegiendo cada celda de forma individual.
+            nervioso del pack — con los estándares de monitoreo de la
+            industria de almacenamiento energético a gran escala —
+            protegiendo cada celda de forma individual.
           </p>
 
           <StaggerGroup className="mt-10 space-y-6">

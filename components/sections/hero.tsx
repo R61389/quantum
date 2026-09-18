@@ -7,34 +7,33 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { TextReveal } from "@/components/motion/text-reveal";
 import { MagneticButton } from "@/components/motion/magnetic-button";
-import { MouseGlow } from "@/components/motion/mouse-glow";
-import { BatteryCoreVisual } from "@/components/motion/battery-core-visual";
+import { IsotopeCanvas } from "@/components/motion/isotope-canvas";
 import { useAssistant } from "@/components/assistant/context";
 
 export function Hero() {
   const { openAssistant } = useAssistant();
 
   return (
-    <section id="top" className="relative scroll-mt-28 overflow-hidden pb-20 pt-40 lg:pb-32 lg:pt-48">
-      <div className="grid-bg absolute inset-0 h-[140%]" aria-hidden="true" />
-      <MouseGlow color="rgba(73,104,162,0.25)" />
+    <section
+      id="top"
+      className="relative flex min-h-[100dvh] scroll-mt-28 flex-col justify-center overflow-hidden bg-[#05070d] pb-20 pt-40 lg:pb-32 lg:pt-48"
+    >
+      <div className="absolute inset-0" aria-hidden="true">
+        <IsotopeCanvas />
+      </div>
 
-      {/* dynamic light beams */}
-      <motion.div
+      {/* legibility scrim behind the copy column — canvas stays fully visible elsewhere */}
+      <div
+        className="absolute inset-y-0 left-0 w-full lg:w-[64%]"
         aria-hidden="true"
-        className="absolute -top-24 left-1/4 h-[520px] w-[2px] origin-top rotate-[18deg] bg-gradient-to-b from-quantum-navy/60 via-quantum-navy/10 to-transparent blur-[2px]"
-        animate={{ opacity: [0.3, 0.8, 0.3] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.div
-        aria-hidden="true"
-        className="absolute -top-24 right-1/3 h-[420px] w-[2px] origin-top -rotate-[14deg] bg-gradient-to-b from-quantum-navy-light/50 via-quantum-navy-light/10 to-transparent blur-[2px]"
-        animate={{ opacity: [0.6, 0.2, 0.6] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(5,7,13,0.85) 0%, rgba(5,7,13,0.6) 55%, transparent 100%)",
+        }}
       />
 
-      <div className="container relative grid items-center gap-16 lg:grid-cols-2 lg:gap-8">
-        <div>
+      <div className="container relative">
+        <div className="max-w-2xl">
           <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
@@ -111,14 +110,6 @@ export function Hero() {
             ))}
           </motion.div>
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <BatteryCoreVisual />
-        </motion.div>
       </div>
 
       <motion.a

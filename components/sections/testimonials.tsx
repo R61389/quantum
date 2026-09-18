@@ -6,6 +6,7 @@ import { Quote, Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { TextReveal } from "@/components/motion/text-reveal";
+import { ScrollReveal } from "@/components/motion/scroll-reveal";
 
 // Representative testimonial themes — replace with real, attributed client
 // quotes before production launch.
@@ -65,7 +66,7 @@ export function Testimonials() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-          <div className="glass relative min-h-[260px] overflow-hidden rounded-3xl p-8 sm:p-12">
+          <ScrollReveal className="glass relative min-h-[260px] overflow-hidden rounded-3xl p-8 sm:p-12">
             <Quote className="h-10 w-10 text-quantum-navy-light/30" />
             <AnimatePresence mode="wait">
               <motion.div
@@ -89,7 +90,7 @@ export function Testimonials() {
                 </div>
               </motion.div>
             </AnimatePresence>
-          </div>
+          </ScrollReveal>
 
           <div className="mt-6 flex items-center justify-center gap-4">
             <button

@@ -16,7 +16,7 @@ export function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-[100dvh] scroll-mt-28 flex-col justify-center overflow-hidden bg-[#05070d] pb-20 pt-40 lg:pb-32 lg:pt-48"
+      className="relative flex min-h-[100dvh] scroll-mt-28 flex-col justify-center overflow-hidden bg-background pb-20 pt-40 lg:pb-32 lg:pt-48"
     >
       <div className="absolute inset-0" aria-hidden="true">
         <IsotopeCanvas />

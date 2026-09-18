@@ -6,6 +6,7 @@ import { AssistantProvider } from "@/components/assistant/context";
 import { AssistantPanel } from "@/components/assistant/assistant-panel";
 import { WhatsAppFloatButton } from "@/components/assistant/whatsapp-float-button";
 import { AuroraBackground } from "@/components/motion/aurora-background";
+import { ExplodingBattery } from "@/components/motion/exploding-battery";
 
 import "./globals.css";
 
@@ -71,6 +72,7 @@ export default function RootLayout({
     <html lang="es" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <body className="min-h-screen bg-background font-sans text-foreground">
         <AuroraBackground fixed />
+        <ExplodingBattery />
         <AssistantProvider>
           <div className="relative z-10">{children}</div>
           <AssistantPanel />

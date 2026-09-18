@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 230 35% 5%;
+    --background: 225 44% 4%; /* matches the hero canvas base (#05070d) exactly */
     --foreground: 0 0% 100%;
 
     --card: 228 30% 9%;

@@ -18,7 +18,7 @@ const faqs = [
   },
   {
     question: "¿Trabajan con proyectos industriales a gran escala?",
-    answer: "Sí. Diseñamos soluciones desde sistemas UPS individuales hasta almacenamiento energético a escala industrial, con ingeniería, ensamblaje y soporte adaptados al volumen y complejidad del proyecto.",
+    answer: "Sí. Diseñamos soluciones desde una unidad personalizada hasta almacenamiento energético a escala industrial, con ingeniería, ensamblaje y soporte adaptados al volumen y complejidad del proyecto.",
   },
   {
     question: "¿Cómo funciona el diagnóstico y soporte remoto?",
